@@ -71,8 +71,8 @@ for frame in camera.capture_continous(rawCapture, format = "bgr", use_video_port
 
     #grabbing the frame
     image = frame.array
-
-    cv.imshow("Frame", image)#showing image if needed
+    readQr(image)
+    #cv.imshow("Frame", image)#showing image if needed
     key = cv.waitKey(1) & 0xFF
 
     rawCapture.truncate(0)#clear stream in preperation for next frame
